@@ -1,0 +1,17 @@
+let playlist = document.getElementById('songList')
+    let div = document.createElement('div')
+    songs.forEach((song) => {
+
+        playlist.appendChild(div)
+        playlist.innerHTML = `
+    <div class="musicCard">
+                            <ul>
+                                <li>
+                                    <img src="./images/music.svg">
+                                    hg
+                                    <img src="./images/play.svg"
+                                </li>
+                            </ul>
+                        </div>
+    `
+    });

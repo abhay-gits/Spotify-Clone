@@ -17,16 +17,16 @@
             <!-- Left First -->
             <div class="leftFirst">
                 <div class="logo invert">
-                    <img src="logo.svg" alt="logo">
+                    <img src="./images/logo.svg" alt="logo">
                 </div>
                 <!--  -->
                 <ul class="invert">
                     <div class="home">
-                        <img src="home.svg" alt="home">
+                        <img src="./images/home.svg" alt="home">
                         <li>Home</li>
                     </div>
                     <div class="search">
-                        <img src="search.svg" alt="search">
+                        <img src="./images/search.svg" alt="search">
                         <li>Search</li>
                     </div>
                 </ul>
@@ -34,16 +34,23 @@
             <!-- Left Second -->
             <div class="leftSecond">
                 <div class="library">
-                    <img class="invert" src="library.svg">
+                    <img class="invert" src="./images/library.svg">
                     <h3>Your Library</h3>
                     <i class="fa-solid fa-plus"></i>
                 </div>
-                <!--  -->
-                <div class="libraryContainer">
-                    <h3>Create your first playlist</h3>
-                    <p>It's easy, we'll help you</p>
+                <div class="songList" id="songList">
+                    <div class="musicCard">
+                        <ul>
+                            <!-- <li>
+                                <img src="./images/music.svg">
+                                Song Name
+                                <img src="./images/play.svg"
+                            </li> -->
+                        </ul>
+                    </div>
                 </div>
-                <!--  -->
+            </div>
+            <div class="leftThird">
                 <div class="leftFooter">
                     <div><a href="" id=""><span>Legal</span></a></div>
                     <div><a href="" id=""><span>Privacy Center</span></a></div>
@@ -63,8 +70,8 @@
         <div class="right">
             <div class="rightHeader">
                 <div class="headerControls">
-                    <img class="invert" src="leftsvg.svg">
-                    <img class="invert" src="rightSvg.svg">
+                    <img class="invert" src="./images/leftsvg.svg">
+                    <img class="invert" src="./images/rightSvg.svg">
                 </div>
                 <div class="headerButtons">
                     <button class="signupBtn">Sign up</button>
@@ -110,16 +117,33 @@
                     </div>
                 </div>
             </div>
-            <div class="player">
-                <div class="playerButtons">
-                    <i class="fa-solid fa-forward"></i>
-                    <i class="fa-solid fa-play"></i>
-                    <i class="fa-solid fa-backward"></i
-                </div>           
+            <!-- Player -->
+            <div class="player" id="player">
+                <div class="playerTop invert">
+                    <!-- SongName -->
+                    <div id="currentSongName"></div>
+                    <!-- Player Buttons -->
+                    <div class="playerButtons">
+                            <img src="./images/leftSvg.svg" id="previous">
+                            <img src="./images/pause.svg" id="playButton">
+                            <img src="./images/rightsvg.svg" id="next">
+                    </div>
+                    <!-- Volume -->
+                        <div class="volume">
+                            <input id="volumeRange" type="range" min="0" max="100">
+                        </div>
+                        <!-- Song Time -->
+                        <div id="currentSongTime"></div>
+                </div>
+                <div class="seekBar" id="seekBar">
+                    <div id="circle" class="circle">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/01f381dc78.js" crossorigin="anonymous"></script>    
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/01f381dc78.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

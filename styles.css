@@ -8,6 +8,7 @@
 body{
     background-color: black;
     font-family: 'Roboto', sans-serif;
+    user-select: none;
 }
 .container{
     display: flex;
@@ -52,8 +53,8 @@ body{
 /* Left Second */
 .leftSecond{
     background-color: #121212;
-    padding: 20px;
     margin: 10px;
+    margin-bottom: 0;
     border-radius: 8px;
     gap: 15px;
     min-height: 40vh;
@@ -61,6 +62,8 @@ body{
 }
 .library{
     display: flex;
+    margin: 20px;
+    padding: 10px;
 }
 .library img{
     width: 15px;
@@ -75,9 +78,30 @@ body{
     left: 120px;
 }
 
+.songList{
+    background-color: grey;
+    width: 100%;
+    height: 200px;
+    overflow-y: scroll;
+}
 /* Library Container */
-
-.libraryContainer{
+.musicCard{
+    background-color: #242424;
+    height: 100%;
+    padding: 5px;
+}
+.musicCard ul li{
+    color: white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 1px black;
+    margin-top: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+/* .libraryContainer{
     background-color: #242424;
     margin-top: 15px;  
     border-radius: 5px;
@@ -92,9 +116,13 @@ body{
     color: white;
     margin-top: 10px;
     font-size: 14px;
-}
+} */
 
 /* Left Footer */
+.leftThird{
+    padding: 3px;
+    margin: 0 10px;
+}
 .leftFooter{
     width: 100%;
     display: flex;
@@ -114,7 +142,7 @@ body{
     padding: 10px;
     border-radius: 30px;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 
@@ -216,13 +244,13 @@ body{
 
 /* Player */
 .player{
-    width: 100%;
-    min-height: 60px;
-    height: 60px;
+    width: 75vw;
+    min-height: 70px;
+    height: 70px;
     position: fixed;
     bottom: 2px;
     background-color: #121212;
-    
+    padding-bottom: 15px;
 }
 .player i{
     color: white;
@@ -235,4 +263,47 @@ body{
     width: 70vw;
     height: 100%;
     gap: 20px;
+    position: fixed;
+    right: 60px;
+    cursor: pointer;
+}
+#volumeRange{
+    position: fixed;
+    right: 150px;
+    top: 24px;
+}
+#next,#previous{
+    width:17px;
+}
+.playerTop{
+    width: 90%;
+    height: 85%;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.seekBar{
+    margin: 0px 20px;
+    width: 71vw;
+    height: 4px;
+    background-color: white;
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.circle{
+    width: 15px;
+    height: 15px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    left: 0%;
+    bottom: -5px;
+    margin: 0;
+    transition: all 0.3s;
 }
